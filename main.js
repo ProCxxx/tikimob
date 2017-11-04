@@ -5,6 +5,7 @@ var h = window.innerHeight;
 var area = false;
 var out = false;
 var goutoready=true;
+var loggedin=false;
 
 function laod(){
 	var load = document.getElementById("loadscreen");
@@ -36,8 +37,8 @@ function laod(){
 					clearInterval(interval);
 				}
 			}
-		},100);
-	},1000);
+		},90);
+	},700);
 }
 function odr(){
 	document.addEventListener("mousedown", down);
@@ -45,6 +46,20 @@ function odr(){
 
 	document.addEventListener("touchstart", mdown);
 	document.addEventListener("touchend", mup);
+
+	var lin = document.getElementById("loggedin");
+	var lout = document.getElementById("loggedout");
+	lin.style.display="none";
+	lout.style.display="block";
+	setInterval(function(){
+		if(!loggedin){
+			lin.style.display="none";
+			lout.style.display="block";
+		}else{
+			lout.style.display="none";
+			lin.style.display="block";
+		}
+	},1000)
 
 }
 function gouto(ajdi){
@@ -91,7 +106,7 @@ function gouto(ajdi){
 
 			}
 		}
-	},100);
+	},70);
 	}
 }
 
@@ -166,7 +181,7 @@ function hide(){
 	var side = document.getElementById("sidebar2");
 	var side2 = document.getElementById("sidebar");
 	var side3 = document.getElementById("sidebar3");
-	if(-100+x2/w*100<-30){
+	if((!out &&(-100+x2/w*100<-70)) || (out && (-100+x2/w*100<-40)) ){
 		side.style.left="-100vw";
 		side2.style.left="-100vw";
 		side3.style.left="-20vw";
@@ -189,6 +204,11 @@ function contact(){
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         alert(this.responseText);
+        if(this.responseText=="Succesfully sent"){
+        	document.getElementById("cnt-name").value="";
+			document.getElementById("cnt-mail").value="";
+			document.getElementById("cnt-msg").value="";
+        }
       }
     }
     xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/contact.php', true);
@@ -209,6 +229,14 @@ function register(){
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         alert(this.responseText);
+        if(this.responseText=="Succesfully registered"){
+        	gouto("login");
+        	document.getElementById("reg-name").value="";
+			document.getElementById("reg-un").value="";
+			document.getElementById("reg-pw").value="";
+			document.getElementById("reg-pw2").value="";
+			document.getElementById("reg-mail").value="";
+        }
       }
     }
     xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/register.php', true);
@@ -224,6 +252,12 @@ function login(){
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         alert(this.responseText);
+        if(this.responseText=="Logged in successfully"){
+        	loggedin=true;
+        	gouto('profile');
+        	document.getElementById("log-un").value="";
+        	document.getElementById("log-pw").value="";
+        }
       }
     }
     xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/login.php', true);

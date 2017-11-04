@@ -22,8 +22,15 @@
 				<button class="btn-home" onclick="gouto('mainscreen')">Home</button>
 				<button class="btn-about" onclick="gouto('about')">About</button>
 				<button class="btn-contact" onclick="gouto('contact')">Contact</button>
+				<div id="loggedout">
 				<button class="btn-login" onclick="gouto('login')">Log in</button>
 				<button class="btn-register" onclick="gouto('register')">Regsiter</button>
+				</div>
+				<div id="loggedin">
+				<button class="btn-profile" onclick="gouto('profile')">Profile</button>
+				<button class="btn-options" onclick="gouto('options')">Options</button>	
+				<button class="btn-out" onclick="loggedin=false;gouto('login')">Log out</button>	
+				</div>
 				<p class="copy">Tiki &copy</p>
 			</div>
 			<div id="sidebar3"></div>
