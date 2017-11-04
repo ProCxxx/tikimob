@@ -93,7 +93,7 @@ body {
 	left: -20vw;
 	width: 20vw;
 	height: 100vh;
-	background-color: rgba(0,0,0,1);
+	background-color: rgba(0,0,0,0.3);
 }
 #sidebar .title {
 	position: relative;
@@ -321,4 +321,86 @@ body {
 	left: 5vw;
 	width: 90vw;
 	height: 10vh;
+}
+#options {
+	display: none;
+	position: fixed;
+	left: 5vw;
+	top: 5vh;
+	width: 90vw;
+	height: 90vh;
+	text-align: center;
+}
+#options .title {
+	font-size: 10vh;
+	position: relative;
+	top:0;
+	left: 5vw;
+	width: 80vw;
+	height: 8vh;
+}
+#nejm{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#juzernejm{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#mejl{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#old-pw{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#new-pw{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#new-pw-2{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#opt-btn-1{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#opt-btn-2{
+	position: relative;
+	top:5vh;
+	left: 0;
+	width: 90vw;
+	height: 8vh;
+}
+#profile {
+	display: none;
+	position: fixed;
+	top:5vh;
+	left: 5vw;
+	width: 90vw;
+	height: 90vh;
+	text-align: center;
 }
