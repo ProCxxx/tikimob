@@ -4,6 +4,7 @@ var w = window.innerWidth;
 var h = window.innerHeight;
 var area = false;
 var out = false;
+var goutoready=true;
 
 function laod(){
 	var load = document.getElementById("loadscreen");
@@ -47,7 +48,10 @@ function odr(){
 
 }
 function gouto(ajdi){
+	if(goutoready){
 	if(ajdi==cactiv) return false;
+	out=false;
+	goutoready=false;
 	var second = document.getElementById(ajdi);
 	var first = document.getElementById(cactiv);
 	var side = document.getElementById("sidebar2");
@@ -83,10 +87,12 @@ function gouto(ajdi){
 				side.style.left="-100vw";
 				area=false;
 				out=false;
+				goutoready=true;
+
 			}
 		}
 	},100);
-	
+	}
 }
 
 function down(event){
@@ -172,4 +178,55 @@ function hide(){
 		out=true;
 	}
 	}
+}
+
+function contact(){
+	var name = document.getElementById("cnt-name").value;
+	var email = document.getElementById("cnt-mail").value;
+	var msg = document.getElementById("cnt-msg").value;
+	
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+      }
+    }
+    xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/contact.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('name='+name+'&email='+email+'&msg='+msg);
+}
+
+
+function register(){
+	var name = document.getElementById("reg-name").value;
+	var username = document.getElementById("reg-un").value;
+	var pw1 = document.getElementById("reg-pw").value;
+	var pw2 = document.getElementById("reg-pw2").value;
+	var email = document.getElementById("reg-mail").value;
+	
+	
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+      }
+    }
+    xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/register.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('name='+name+'&email='+email+'&pw='+pw1+'&pw2='+pw2+'&user='+username);
+}
+
+function login(){
+	var username = document.getElementById("log-un").value;
+	var pw1 = document.getElementById("log-pw").value;
+		
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+      }
+    }
+    xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/login.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('user='+username+'&pw='+pw1);
 }

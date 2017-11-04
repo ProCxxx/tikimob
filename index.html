@@ -53,17 +53,17 @@
 		<div id="contact">
 			<p class=title>Contact</p>
 			<input type="text" id="cnt-name" placeholder="Name...">
-			<input type="text" id="cnt-mail" placeholder="E-mail...">
+			<input type="email" id="cnt-mail" placeholder="E-mail...">
 			<textarea id="cnt-msg" placeholder="Message..."></textarea>
-			<button class="cnt-btn">Submit</button>
+			<button class="cnt-btn" onclick="contact();">Submit</button>
 			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
 		</div>
 
 		<div id="login">
 			<p class="title">Log in</p>
 			<input type="text" id="log-un" placeholder="Username...">
-			<input type="text" id="log-pw" placeholder="Password...">
-			<button class="log-btn">Log in</button>
+			<input type="password" id="log-pw" placeholder="Password...">
+			<button class="log-btn" onclick="login();">Log in</button>
 			<p class="remember">Remember me</p>
 			<input type="checkbox" value="true" id="remember">
 			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
@@ -76,13 +76,13 @@
 			<input type="password" id="reg-pw" placeholder="Password...">
 			<input type="password" id="reg-pw2" placeholder="Confirm password...">
 			<input type="email" id="reg-mail" placeholder="E-mail...">
-			<button class="reg-btn">Register</button>
+			<button class="reg-btn" onclick="register();">Register</button>
 			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
 		</div>
 
 		<div id="profile">
 			<p class="title">Profile</p>
-			
+
 			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
 		</div>
 
@@ -92,9 +92,9 @@
 			<input type="text" id="juzernejm" placeholder="Username...">
 			<input type="text" id="mejl" placeholder="E-mail...">
 			<button id="opt-btn-1">Save</button>
-			<input type="text" id="old-pw" placeholder="Old password...">
-			<input type="text" id="new-pw" placeholder="New password...">
-			<input type="text" id="new-pw-2" placeholder="New password...">
+			<input type="password" id="old-pw" placeholder="Old password...">
+			<input type="password" id="new-pw" placeholder="New password...">
+			<input type="password" id="new-pw-2" placeholder="New password...">
 			<button id="opt-btn-2">Save</button>
 			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
 		</div>
