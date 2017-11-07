@@ -29,7 +29,7 @@
 				<div id="loggedin">
 				<button class="btn-profile" onclick="gouto('profile')">Profile</button>
 				<button class="btn-options" onclick="gouto('options')">Options</button>	
-				<button class="btn-out" onclick="loggedin=false;gouto('login')">Log out</button>	
+				<button class="btn-out" onclick="logout();gouto('login')">Log out</button>	
 				</div>
 				<p class="copy">Tiki &copy</p>
 			</div>
@@ -98,11 +98,11 @@
 			<input type="text" id="nejm" placeholder="Name...">
 			<input type="text" id="juzernejm" placeholder="Username...">
 			<input type="text" id="mejl" placeholder="E-mail...">
-			<button id="opt-btn-1">Save</button>
+			<button id="opt-btn-1" onclick="optuser();">Save</button>
 			<input type="password" id="old-pw" placeholder="Old password...">
 			<input type="password" id="new-pw" placeholder="New password...">
 			<input type="password" id="new-pw-2" placeholder="New password...">
-			<button id="opt-btn-2">Save</button>
+			<button id="opt-btn-2" onclick="optpw();">Save</button>
 			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
 		</div>
 

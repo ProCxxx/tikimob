@@ -116,21 +116,21 @@ body {
 	left: 0;
 	top: 5vh;
 	width: 70vw;
-	height: 5vh;
+	height: 7vh;
 }
 .btn-about {
 	position: relative;
 	left: 0;
-	top:10vh;
+	top:7vh;
 	width: 70vw;
-	height: 5vh;
+	height: 7vh;
 }
 .btn-contact {
 	position: relative;
 	left: 0;
-	top:15vh;
+	top:9vh;
 	width: 70vw;
-	height: 5vh;
+	height: 7vh;
 }
 #loggedout{
 	display: block;
@@ -143,16 +143,16 @@ body {
 .btn-login {
 	position: relative;
 	left: 0vw;
-	top: 20vh;
+	top: 11vh;
 	width: 70vw;
-	height: 5vh;
+	height: 7vh;
 }
 .btn-register {
 	position: relative;
 	left: 0vw;
-	top: 25vh;
+	top: 13vh;
 	width: 70vw;
-	height: 5vh;
+	height: 7vh;
 }
 #looggedin{
 	display: none;
@@ -166,16 +166,16 @@ body {
 .btn-profile {
 	position: relative;
 	left: 0;
-	top: 20vh;
+	top: 11vh;
 	width: 70vw;
-	height: 5vh;
+	height: 7vh;
 }
 .btn-options {
 	position: relative;
 	left: 0;
-	top: 25vh;
+	top: 13vh;
 	width: 70vw;
-	height: 5vh;
+	height: 7vh;
 }
 .btn-out {
 	position: relative;
@@ -187,7 +187,7 @@ body {
 .copy {
 	position: relative;
 	left: 0;
-	top: 40vh;
+	top: 20vh;
 	width: 80vw;
 	height: 10vh;
 }

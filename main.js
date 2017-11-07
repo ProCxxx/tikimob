@@ -6,6 +6,7 @@ var area = false;
 var out = false;
 var goutoready=true;
 var loggedin=false;
+var U;var PW;
 
 function laod(){
 	var load = document.getElementById("loadscreen");
@@ -254,6 +255,10 @@ function login(){
         alert(this.responseText);
         if(this.responseText=="Logged in successfully"){
         	loggedin=true;
+        	document.cookie = "u="+username;
+        	document.cookie = "upw="+upw(username,pw1);  
+        	U=username;
+        	PW=pw1;
         	gouto('profile');
         	document.getElementById("log-un").value="";
         	document.getElementById("log-pw").value="";
@@ -264,3 +269,56 @@ function login(){
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send('user='+username+'&pw='+pw1);
 }
+
+function optuser(){
+	var name = document.getElementById("nejm").value;
+	var uname = document.getElementById("juzernejm").value;
+	var mail = document.getElementById("mejl").value;
+		
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+      }
+    }
+    xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/infochange.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('name='+name+'&uname='+uname+"&mail="+mail);
+}
+
+function optpw(){
+	var oldpw = document.getElementById("old-pw").value;
+	var pw1 = document.getElementById("new-pw").value;
+	var pw2 = document.getElementById("new-pw-2").value;
+		
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        alert(this.responseText);
+        if(this.responseText=="Password changed successfully")
+        	document.getElementById("old-pw").value="";
+        	document.getElementById("new-pw").value="";
+        	document.getElementById("new-pw-2").value="";
+      }
+    }
+    xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/pwchange.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('opw='+oldpw+'&pw1='+pw1+"&pw2="+pw2);
+}
+
+ function upw(u1,pw1){
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+      if (this.readyState == 4 && this.status == 200) {
+        return this.responseText;
+    }
+    xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/upw.php', true);
+    xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    xhttp.send('u='+u1+'&pw1='+pw1);
+ }
+
+ function logout(){
+ 	delete U;
+ 	delete PW;
+ 	loggedin=false;
+ }
