@@ -82,7 +82,7 @@ function gouto(ajdi){
 	second.style.display = "none";
 	first.style.opacity = op;
 	first.style.display = "block";
-	
+
 	var interval2 = setInterval(function(){
 		if(first.style.opacity>0){
 			op-=0.1;
@@ -153,7 +153,7 @@ function mmove(event){
 	document.getElementById("sidebar").style.left=-100+x2/w*100+"vw";
 	document.getElementById("sidebar3").style.left=-20+x2/w*100+"vw";
 	}
-		
+
 	calculate(x2);
 }
 function mup(event){
@@ -175,7 +175,7 @@ function calculate(x2){
 	var side = document.getElementById("sidebar2");
 	side.style.left= -100+x2/w*100+"vw";
 	}
-	
+
 }
 
 function hide(){
@@ -201,7 +201,7 @@ function contact(){
 	var name = document.getElementById("cnt-name").value;
 	var email = document.getElementById("cnt-mail").value;
 	var msg = document.getElementById("cnt-msg").value;
-	
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -225,8 +225,8 @@ function register(){
 	var pw1 = document.getElementById("reg-pw").value;
 	var pw2 = document.getElementById("reg-pw2").value;
 	var email = document.getElementById("reg-mail").value;
-	
-	
+
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -249,7 +249,7 @@ function register(){
 function login(){
 	var username = document.getElementById("log-un").value;
 	var pw1 = document.getElementById("log-pw").value;
-		
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -257,7 +257,7 @@ function login(){
         if(this.responseText=="Logged in successfully"){
         	loggedin=true;
         	U=username;
-        	UPW=upw(username,pw1);  
+        	UPW=upw(username,pw1);
         	gouto('profile');
         	document.getElementById("log-un").value="";
         	document.getElementById("log-pw").value="";
@@ -273,7 +273,7 @@ function optuser(){
 	var name = document.getElementById("nejm").value;
 	var uname = document.getElementById("juzernejm").value;
 	var mail = document.getElementById("mejl").value;
-		
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -289,7 +289,7 @@ function optpw(){
 	var oldpw = document.getElementById("old-pw").value;
 	var pw1 = document.getElementById("new-pw").value;
 	var pw2 = document.getElementById("new-pw-2").value;
-		
+
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
@@ -311,7 +311,8 @@ function optpw(){
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         return this.responseText;
-    }
+	}
+	}
     xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/upw.php', true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xhttp.send('u='+u1+'&pw1='+pw1);
