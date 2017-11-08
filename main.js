@@ -319,7 +319,7 @@ function optpw(){
  }
 
  function logout(){
- 	delete U;
- 	delete PW;
+ 	//delete U;
+ 	//delete PW;
  	loggedin=false;
  }
