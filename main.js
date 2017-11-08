@@ -295,10 +295,11 @@ function optpw(){
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
         alert(this.responseText);
-        if(this.responseText=="Password changed successfully")
+        if(this.responseText=="Password changed successfully"){
         	document.getElementById("old-pw").value="";
         	document.getElementById("new-pw").value="";
         	document.getElementById("new-pw-2").value="";
+	}
       }
     }
     xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/pwchange.php', true);
