@@ -6,7 +6,8 @@ var area = false;
 var out = false;
 var goutoready=true;
 var loggedin=false;
-var U;var PW;
+var U;var UPW;
+
 
 function laod(){
 	var load = document.getElementById("loadscreen");
@@ -255,10 +256,8 @@ function login(){
         alert(this.responseText);
         if(this.responseText=="Logged in successfully"){
         	loggedin=true;
-        	document.cookie = "u="+username;
-        	document.cookie = "upw="+upw(username,pw1);  
         	U=username;
-        	PW=pw1;
+        	UPW=upw(username,pw1);  
         	gouto('profile');
         	document.getElementById("log-un").value="";
         	document.getElementById("log-pw").value="";
@@ -283,7 +282,7 @@ function optuser(){
     }
     xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/infochange.php', true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send('name='+name+'&uname='+uname+"&mail="+mail);
+    xhttp.send('name='+name+'&uname='+uname+"&mail="+mail+"upw="+UPW);
 }
 
 function optpw(){
@@ -303,7 +302,7 @@ function optpw(){
     }
     xhttp.open('POST', 'https://pr0xy.000webhostapp.com/tikimob/pwchange.php', true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send('opw='+oldpw+'&pw1='+pw1+"&pw2="+pw2);
+    xhttp.send('opw='+oldpw+'&pw1='+pw1+"&pw2="+pw2+"upw="+UPW);
 }
 
  function upw(u1,pw1){
