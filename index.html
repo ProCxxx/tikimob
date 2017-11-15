@@ -1,108 +1,111 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		 <meta charset="utf-8">
-		 <meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>TIKI</title>
-		<link rel="stylesheet" type="text/css" href="main.css" />
-		<script type="text/javascript" src="main.js"></script>
-	</head>
-	<body onload="laod();odr();" id="body">
-		<!-- <p id="cord" class="title"></p> -->
-		<div id="loadscreen">
-			<p class="title">TIKI</p>
-			<img src="img/logo.png" alt="logo">
-			<p class="whom">Pr0xY</p>
-		</div>
 
-		<div id="sidebar2">
-			<div id="sidebar">
-				<p class="title">TIKI</p>
-				<p class="title#2">MENU</p>
-				<button class="btn-home" onclick="gouto('mainscreen')">Home</button>
-				<button class="btn-about" onclick="gouto('about')">About</button>
-				<button class="btn-contact" onclick="gouto('contact')">Contact</button>
-				<div id="loggedout">
-				<button class="btn-login" onclick="gouto('login')">Log in</button>
-				<button class="btn-register" onclick="gouto('register')">Regsiter</button>
-				</div>
-				<div id="loggedin">
-				<button class="btn-profile" onclick="gouto('profile')">Profile</button>
-				<button class="btn-options" onclick="gouto('options')">Options</button>
-				<button class="btn-out" onclick="logout();gouto('login')">Log out</button>
-				</div>
-				<p class="copy">Tiki &copy</p>
-			</div>
-			<div id="sidebar3"></div>
-		</div>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>TIKI</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <script type="text/javascript" src="main.js"></script>
+</head>
 
-		<div id="mainscreen">
-			<p class="title">TIKI</p>
-			<img src="img/logo.png" alt="logo">
-			<p class="main-text">Tiki is new</p>
-			<p class="main-text">Social network</p>
-			<p class="main-text">More about us</p>
-			<p class="main-text">You can find</p>
-			<p class="main-text">On about page</p>
-		</div>
+<body onload="laod();odr();" id="body">
+    <!-- <p id="cord" class="title"></p> -->
+    <div id="loadscreen">
+        <p class="title">TIKI</p>
+        <img src="img/logo.png" alt="logo">
+        <p class="whom">Pr0xY</p>
+    </div>
 
-		<div id="about">
-			<p class="title">About</p>
-			<p class="abt-text">SUK AR KAK</p>
-			<p class="abt-text">SUK AR KAK</p>
-			<p class="abt-text">SUK AR KAK</p>
-			<p class="abt-text">SUK AR KAK</p>
-			<p class="abt-text">SUK AR KAK</p>
-			<p class="abt-text">SUK AR KAK</p>
-			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
-		</div>
+    <div id="sidebar2">
+        <div id="sidebar">
+            <p class="title">TIKI</p>
+            <p class="title#2">MENU</p>
+            <button class="btn-home" onclick="gouto('mainscreen')">Home</button>
+            <button class="btn-about" onclick="gouto('about')">About</button>
+            <button class="btn-contact" onclick="gouto('contact')">Contact</button>
+            <div id="loggedout">
+                <button class="btn-login" onclick="gouto('login')">Log in</button>
+                <button class="btn-register" onclick="gouto('register')">Regsiter</button>
+            </div>
+            <div id="loggedin">
+                <button class="btn-profile" onclick="gouto('profile')">Profile</button>
+                <button class="btn-options" onclick="gouto('options')">Options</button>
+                <button class="btn-out" onclick="logout();gouto('login')">Log out</button>
+            </div>
+            <p class="copy">Tiki &copy</p>
+        </div>
+        <div id="sidebar3"></div>
+    </div>
 
-		<div id="contact">
-			<p class=title>Contact</p>
-			<input type="text" id="cnt-name" placeholder="Name...">
-			<input type="email" id="cnt-mail" placeholder="E-mail...">
-			<textarea id="cnt-msg" placeholder="Message..."></textarea>
-			<button class="cnt-btn" onclick="contact();">Submit</button>
-			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
-		</div>
+    <div id="mainscreen">
+        <p class="title">TIKI</p>
+        <img src="img/logo.png" alt="logo">
+        <p class="main-text">Tiki is new</p>
+        <p class="main-text">Social network</p>
+        <p class="main-text">More about us</p>
+        <p class="main-text">You can find</p>
+        <p class="main-text">On about page</p>
+    </div>
 
-		<div id="login">
-			<p class="title">Log in</p>
-			<input type="text" id="log-un" placeholder="Username...">
-			<input type="password" id="log-pw" placeholder="Password...">
-			<button class="log-btn" onclick="login();">Log in</button>
-			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
-		</div>
+    <div id="about">
+        <p class="title">About</p>
+        <p class="abt-text">TIKI IS </p>
+        <p class="abt-text">NEW SOCIAL </p>
+        <p class="abt-text">NETWORK</p>
+        <p class="abt-text">SO FAR IT'S</p>
+        <p class="abt-text">IN BETA</p>
+        <p class="abt-text">BUT SOON...</p>
+        <button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
+    </div>
 
-		<div id="register">
-			<p class="title">Register</p>
-			<input type="text" id="reg-name" placeholder="Name...">
-			<input type="text" id="reg-un" placeholder="Username...">
-			<input type="password" id="reg-pw" placeholder="Password...">
-			<input type="password" id="reg-pw2" placeholder="Confirm password...">
-			<input type="email" id="reg-mail" placeholder="E-mail...">
-			<button class="reg-btn" onclick="register();">Register</button>
-			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
-		</div>
+    <div id="contact">
+        <p class=title>Contact</p>
+        <input type="text" id="cnt-name" placeholder="Name...">
+        <input type="email" id="cnt-mail" placeholder="E-mail...">
+        <textarea id="cnt-msg" placeholder="Message..."></textarea>
+        <button class="cnt-btn" onclick="contact();">Submit</button>
+        <button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
+    </div>
 
-		<div id="profile">
-			<p class="title">Profile</p>
+    <div id="login">
+        <p class="title">Log in</p>
+        <input type="text" id="log-un" placeholder="Username...">
+        <input type="password" id="log-pw" placeholder="Password...">
+        <button class="log-btn" onclick="login();">Log in</button>
+        <button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
+    </div>
 
-			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
-		</div>
+    <div id="register">
+        <p class="title">Register</p>
+        <input type="text" id="reg-name" placeholder="Name...">
+        <input type="text" id="reg-un" placeholder="Username...">
+        <input type="password" id="reg-pw" placeholder="Password...">
+        <input type="password" id="reg-pw2" placeholder="Confirm password...">
+        <input type="email" id="reg-mail" placeholder="E-mail...">
+        <button class="reg-btn" onclick="register();">Register</button>
+        <button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
+    </div>
 
-		<div id="options">
-			<p class="title">Options</p>
-			<input type="text" id="nejm" placeholder="Name...">
-			<input type="text" id="juzernejm" placeholder="Username...">
-			<input type="text" id="mejl" placeholder="E-mail...">
-			<button id="opt-btn-1" onclick="optuser();">Save</button>
-			<input type="password" id="old-pw" placeholder="Old password...">
-			<input type="password" id="new-pw" placeholder="New password...">
-			<input type="password" id="new-pw-2" placeholder="New password...">
-			<button id="opt-btn-2" onclick="optpw();">Save</button>
-			<button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
-		</div>
+    <div id="profile">
+        <p class="title">Profile</p>
 
-	</body>
+        <button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
+    </div>
+
+    <div id="options">
+        <p class="title">Options</p>
+        <input type="text" id="nejm" placeholder="Name...">
+        <input type="text" id="juzernejm" placeholder="Username...">
+        <input type="text" id="mejl" placeholder="E-mail...">
+        <button id="opt-btn-1" onclick="optuser();">Save</button>
+        <input type="password" id="old-pw" placeholder="Old password...">
+        <input type="password" id="new-pw" placeholder="New password...">
+        <input type="password" id="new-pw-2" placeholder="New password...">
+        <button id="opt-btn-2" onclick="optpw();">Save</button>
+        <button class="back-btn" onclick="gouto('mainscreen');">BACK</button>
+    </div>
+
+</body>
+
 </html>
