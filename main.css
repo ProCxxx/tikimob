@@ -1,4 +1,5 @@
     * {
+        box-sizing: border-box;
         border: none;
         margin: 0;
         padding: 0;
@@ -48,8 +49,20 @@
     
     #contact>input,
     #contact>textarea {
-        border: 2px solid black;
-        border-radius: 10px;
+        border-left: 2px solid black;
+        border-right: 2px solid black;
+        border-bottom: 0.5px solid rgba(0, 0, 0, 0.5);
+        border-radius: 0;
+    }
+    
+    #contact #cnt-name {
+        border-top: 2px solid black;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    #contact #cnt-msg {
+        border-bottom: 2px solid black;
+        border-radius: 0 0 10px 10px;
     }
     
     body {
@@ -144,7 +157,7 @@
         left: -100vw;
         width: 100vw;
         height: 100vh;
-        background-color: lightblue;
+        background-color: #3739d6;
         text-align: center;
         font-size: 3vh;
     }
@@ -324,7 +337,7 @@
     #cnt-mail {
         position: fixed;
         left: 5vw;
-        top: 35vh;
+        top: 30vh;
         width: 90vw;
         height: 10vh;
     }
@@ -332,12 +345,12 @@
     #cnt-msg {
         position: fixed;
         left: 5vw;
-        top: 50vh;
+        top: 40vh;
         width: 90vw;
-        height: 15vh;
+        height: 25vh;
         min-width: 90vw;
         max-width: 90vw;
-        max-height: 15vh;
+        max-height: 25vh;
         min-height: 10vh;
     }
     
@@ -585,6 +598,7 @@
         border-right: 2px solid black;
         border-bottom: 2px solid black;
         border-radius: 0 0 10px 10px;
+        width: 90vw;
     }
     
     #options #opt-btn-1 {
@@ -593,4 +607,15 @@
         border-right: 2px solid black;
         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
         border-radius: 0;
+    }
+    
+    #opt-btn-1::placeholder,
+    #opt-btn-2::placeholder {
+        text-align: center;
+        font-size: 3vh;
+        color: black;
+    }
+    
+    *::placeholder {
+        text-align: center;
     }
