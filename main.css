@@ -271,7 +271,8 @@
         left: 0;
         top: 30vh;
         width: 70vw;
-        height: 5vh;
+        height: 7vh;
+        z-index: 1000;
     }
     
     .copy {
